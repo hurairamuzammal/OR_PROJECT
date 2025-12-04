@@ -8,40 +8,75 @@ import tkinter as tk
 from typing import List, Optional, Callable
 import numpy as np
 
+# Try to import COLORS, fallback to defaults if not available
+try:
+    from config.settings import COLORS, FONTS
+except ImportError:
+    COLORS = {
+        "primary": "#0F4C75",
+        "border": "#E2E8F0",
+        "background": "#F8FAFC",
+        "text_primary": "#1E293B"
+    }
+    FONTS = {"family": "Segoe UI"}
+
 
 class ScrollableFrame(ctk.CTkFrame):
     """
     A frame that supports both horizontal and vertical scrolling.
-    Uses tkinter Canvas for full scrolling support.
+    Uses tkinter Canvas for full scrolling support with modern styling.
     """
     
     def __init__(self, parent, width=800, height=400, **kwargs):
-        super().__init__(parent, **kwargs)
+        super().__init__(parent, corner_radius=10, **kwargs)
         
-        # Create canvas with scrollbars
-        self.canvas = tk.Canvas(self, highlightthickness=0, bg=self._apply_appearance_mode(self._fg_color))
+        # Get background color for canvas
+        try:
+            bg_color = self._apply_appearance_mode(self._fg_color)
+        except:
+            bg_color = "#FFFFFF"
         
-        # Scrollbars
-        self.h_scrollbar = ctk.CTkScrollbar(self, orientation="horizontal", command=self.canvas.xview)
-        self.v_scrollbar = ctk.CTkScrollbar(self, orientation="vertical", command=self.canvas.yview)
+        # Create canvas with modern styling
+        self.canvas = tk.Canvas(
+            self, 
+            highlightthickness=0, 
+            bg=bg_color,
+            bd=0
+        )
+        
+        # Modern styled scrollbars
+        self.h_scrollbar = ctk.CTkScrollbar(
+            self, 
+            orientation="horizontal", 
+            command=self.canvas.xview,
+            height=14,
+            corner_radius=7
+        )
+        self.v_scrollbar = ctk.CTkScrollbar(
+            self, 
+            orientation="vertical", 
+            command=self.canvas.yview,
+            width=14,
+            corner_radius=7
+        )
         
         # Configure canvas
         self.canvas.configure(xscrollcommand=self.h_scrollbar.set, yscrollcommand=self.v_scrollbar.set)
         
-        # Layout
-        self.v_scrollbar.pack(side="right", fill="y")
-        self.h_scrollbar.pack(side="bottom", fill="x")
-        self.canvas.pack(side="left", fill="both", expand=True)
+        # Layout with proper padding
+        self.v_scrollbar.pack(side="right", fill="y", padx=(5, 2), pady=2)
+        self.h_scrollbar.pack(side="bottom", fill="x", padx=2, pady=(5, 2))
+        self.canvas.pack(side="left", fill="both", expand=True, padx=2, pady=2)
         
-        # Inner frame for content
-        self.inner_frame = ctk.CTkFrame(self.canvas)
+        # Inner frame for content with transparent background
+        self.inner_frame = ctk.CTkFrame(self.canvas, fg_color="transparent")
         self.canvas_window = self.canvas.create_window((0, 0), window=self.inner_frame, anchor="nw")
         
         # Bind events
         self.inner_frame.bind("<Configure>", self._on_frame_configure)
         self.canvas.bind("<Configure>", self._on_canvas_configure)
         
-        # Mouse wheel scrolling
+        # Mouse wheel scrolling (Windows optimized)
         self.canvas.bind_all("<MouseWheel>", self._on_mousewheel)
         self.canvas.bind_all("<Shift-MouseWheel>", self._on_shift_mousewheel)
         
