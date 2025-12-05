@@ -4,7 +4,7 @@ Home screen with company branding and quick navigation
 """
 
 import customtkinter as ctk
-from config.settings import APP_NAME, COMPANY_NAME, COLORS, FONTS
+from config.settings import APP_NAME, COMPANY_NAME, COLORS, FONTS, GROUP_NAME
 
 
 class DashboardView(ctk.CTkFrame):
@@ -49,24 +49,37 @@ class DashboardView(ctk.CTkFrame):
         
         ctk.CTkLabel(
             title_frame,
-            text="PP CHEMICALS",
+            text="THE BEST LABORATORY",
             font=ctk.CTkFont(family=FONTS["family"], size=FONTS["size_hero"], weight="bold"),
             text_color="#FFFFFF"
         ).pack(side="left")
         
         ctk.CTkLabel(
             title_frame,
-            text="  ®",
-            font=ctk.CTkFont(family=FONTS["family"], size=16),
+            text="  PAKISTAN",
+            font=ctk.CTkFont(family=FONTS["family"], size=FONTS["size_hero"], weight="bold"),
             text_color=COLORS["accent"]
-        ).pack(side="left", anchor="n", pady=(5, 0))
+        ).pack(side="left")
+        
+        # Group badge
+        group_frame = ctk.CTkFrame(hero_content, fg_color="transparent")
+        group_frame.pack(anchor="w", pady=(10, 0))
+        
+        group_badge = ctk.CTkFrame(group_frame, fg_color=COLORS["accent"], corner_radius=6)
+        group_badge.pack(side="left")
+        ctk.CTkLabel(
+            group_badge,
+            text=f"  {GROUP_NAME}  ",
+            font=ctk.CTkFont(family=FONTS["family"], size=12, weight="bold"),
+            text_color="#FFFFFF"
+        ).pack(padx=8, pady=4)
         
         ctk.CTkLabel(
-            hero_content,
-            text="Operations Research Decision Support System",
+            group_frame,
+            text="  |  Operations Research Decision Support System",
             font=ctk.CTkFont(family=FONTS["family"], size=FONTS["size_lg"]),
             text_color=COLORS["secondary_light"]
-        ).pack(anchor="w", pady=(10, 0))
+        ).pack(side="left")
         
         # Accent bar
         accent_bar = ctk.CTkFrame(
@@ -216,7 +229,7 @@ class DashboardView(ctk.CTkFrame):
         
         ctk.CTkLabel(
             footer_content,
-            text="🏭 PP Chemicals - Manufacturing Excellence for Roads & Buildings",
+            text="🧪 The Best Laboratory Pakistan - Scientific Excellence | OptimizeX Group",
             font=ctk.CTkFont(family=FONTS["family"], size=FONTS["size_sm"]),
             text_color=COLORS["text_secondary"]
         ).pack(side="left")

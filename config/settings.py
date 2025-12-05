@@ -1,11 +1,13 @@
 """
-Application settings and constants for PP Chemicals OR Solver
+Application settings and constants for The Best Laboratory Pakistan OR Solver
+Developed by: OptimizeX Group
 """
 
 # Application Info
-APP_NAME = "PP Chemicals - OR Problem Solver"
+APP_NAME = "The Best Laboratory Pakistan - OR Problem Solver"
 APP_VERSION = "1.0.0"
-COMPANY_NAME = "PP Chemicals"
+COMPANY_NAME = "The Best Laboratory Pakistan"
+GROUP_NAME = "OptimizeX"
 
 # Window Settings
 WINDOW_WIDTH = 1280
@@ -13,55 +15,55 @@ WINDOW_HEIGHT = 720
 MIN_WIDTH = 1280
 MIN_HEIGHT = 720
 
-# Theme Colors (Modern Professional PP Chemicals Branding)
+# Theme Colors (Modern Premium Branding - The Best Laboratory Pakistan)
 COLORS = {
-    # Primary palette
-    "primary": "#0F4C75",          # Deep corporate blue
-    "primary_light": "#3282B8",    # Lighter blue
-    "primary_dark": "#0A3655",     # Darker blue
+    # Primary palette - Deep Professional Blue-Purple
+    "primary": "#1E3A5F",          # Deep navy blue
+    "primary_light": "#2E5077",    # Lighter navy
+    "primary_dark": "#152A45",     # Darker navy
     
-    # Secondary palette
-    "secondary": "#00A8CC",        # Teal accent
-    "secondary_light": "#40C4DD",  # Light teal
+    # Secondary palette - Elegant Teal
+    "secondary": "#00B4D8",        # Vibrant cyan
+    "secondary_light": "#48CAE4",  # Light cyan
     
-    # Accent colors
-    "accent": "#FF6B35",           # Vibrant orange
-    "accent_light": "#FF8A5B",     # Light orange
-    "accent_hover": "#E55A2B",     # Darker orange for hover
+    # Accent colors - Gold/Amber for premium feel
+    "accent": "#F59E0B",           # Golden amber
+    "accent_light": "#FBBF24",     # Light gold
+    "accent_hover": "#D97706",     # Darker gold for hover
     
     # Status colors
-    "success": "#00C853",          # Bright green
-    "success_light": "#69F0AE",    # Light green
-    "warning": "#FFB300",          # Amber warning
-    "error": "#FF1744",            # Red error
-    "error_light": "#FF5252",      # Light red
+    "success": "#10B981",          # Emerald green
+    "success_light": "#34D399",    # Light emerald
+    "warning": "#F59E0B",          # Amber warning
+    "error": "#EF4444",            # Soft red error
+    "error_light": "#F87171",      # Light red
     
     # Neutral colors
-    "background": "#F8FAFC",       # Very light gray-blue
-    "background_dark": "#1A1A2E",  # Dark mode background
+    "background": "#F0F4F8",       # Soft gray-blue background
+    "background_dark": "#0F172A",  # Dark mode background
     "surface": "#FFFFFF",          # White surface
-    "surface_dark": "#16213E",     # Dark mode surface
+    "surface_dark": "#1E293B",     # Dark mode surface
     "card": "#FFFFFF",             # Card background
-    "card_dark": "#1F2940",        # Dark mode card
+    "card_dark": "#334155",        # Dark mode card
     
     # Text colors
-    "text_primary": "#1E293B",     # Dark slate
-    "text_secondary": "#64748B",   # Slate gray
+    "text_primary": "#0F172A",     # Deep slate
+    "text_secondary": "#475569",   # Slate gray
     "text_muted": "#94A3B8",       # Muted text
-    "text_light": "#F1F5F9",       # Light text for dark bg
+    "text_light": "#F8FAFC",       # Light text for dark bg
     
     # Border colors
-    "border": "#E2E8F0",           # Light border
-    "border_dark": "#334155",      # Dark mode border
+    "border": "#CBD5E1",           # Soft border
+    "border_dark": "#475569",      # Dark mode border
     
-    # Sidebar colors
-    "sidebar_bg": "#0F4C75",       # Sidebar background
-    "sidebar_hover": "#1A6FA8",    # Sidebar hover
-    "sidebar_active": "#3282B8",   # Sidebar active item
+    # Sidebar colors - Premium gradient feel
+    "sidebar_bg": "#1E3A5F",       # Deep navy sidebar
+    "sidebar_hover": "#2E5077",    # Sidebar hover
+    "sidebar_active": "#3B6998",   # Sidebar active item
     
     # Gradient colors
-    "gradient_start": "#0F4C75",
-    "gradient_end": "#00A8CC"
+    "gradient_start": "#1E3A5F",
+    "gradient_end": "#00B4D8"
 }
 
 # Font settings
@@ -78,12 +80,24 @@ FONTS = {
     "size_hero": 42
 }
 
+# Spacing constants for consistent UI layout
+SPACING = {
+    "xs": 5,      # Extra small - minimal gaps
+    "sm": 10,     # Small - between related elements
+    "md": 15,     # Medium - standard section padding
+    "lg": 20,     # Large - between major sections
+    "xl": 30,     # Extra large - major content areas
+    "2xl": 40,    # 2X large - hero sections
+    "card_padding": 20,    # Inside card containers
+    "section_gap": 25,     # Between section cards
+}
+
 # Default Problem Sizes
 DEFAULT_LP_VARIABLES = 10
 DEFAULT_LP_CONSTRAINTS = 10
 DEFAULT_MATRIX_SIZE = 10
 
-# PP Chemicals Product Names (for demo data)
+# The Best Laboratory Pakistan Product Names (for demo data)
 PRODUCTS = [
     "Bitumen Emulsion",
     "Modified Bitumen",

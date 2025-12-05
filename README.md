@@ -111,4 +111,4 @@ Each problem view includes a "Load PP Chemicals Example" button that populates s
 
 ## License
 
-© 2024 PP Chemicals. All rights reserved.
+© 2024 The Best Laboratory Pakistan. All rights reserved.

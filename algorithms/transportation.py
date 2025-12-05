@@ -586,7 +586,7 @@ class TransportationSolver:
 
 def create_sample_problem() -> TransportationSolver:
     """
-    Create a sample PP Chemicals transportation problem
+    Create a sample TBLP transportation problem
     
     Returns:
         TransportationSolver instance with sample data
@@ -632,7 +632,7 @@ def create_sample_problem() -> TransportationSolver:
 
 if __name__ == "__main__":
     print("=" * 80)
-    print("PP CHEMICALS - TRANSPORTATION PROBLEM")
+    print("THE BEST LABORATORY PAKISTAN - TRANSPORTATION PROBLEM")
     print("Distributing chemicals from plants to construction sites")
     print("=" * 80)
     

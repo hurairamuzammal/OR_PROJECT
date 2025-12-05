@@ -342,7 +342,7 @@ class SimplexSolver:
 
 def create_sample_problem() -> SimplexSolver:
     """
-    Create a sample PP Chemicals production optimization problem
+    Create a sample TBLP production optimization problem
     
     Returns:
         SimplexSolver instance with sample data
@@ -405,7 +405,7 @@ if __name__ == "__main__":
     result = solver.solve()
     
     print("=" * 60)
-    print("PP CHEMICALS - PRODUCTION OPTIMIZATION")
+    print("THE BEST LABORATORY PAKISTAN - PRODUCTION OPTIMIZATION")
     print("=" * 60)
     
     summary = solver.get_solution_summary()

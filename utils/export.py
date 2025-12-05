@@ -46,7 +46,7 @@ def export_to_csv(
             writer = csv.writer(f)
             
             # Write metadata
-            writer.writerow(['PP Chemicals OR Solver Export'])
+            writer.writerow(['The Best Laboratory Pakistan OR Solver Export'])
             writer.writerow([f'Generated: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}'])
             writer.writerow([])
             
@@ -114,7 +114,7 @@ def export_to_json(filepath: str, data: Dict[str, Any]) -> bool:
         
         # Add metadata
         export_data['_metadata'] = {
-            'application': 'PP Chemicals OR Solver',
+            'application': 'The Best Laboratory Pakistan OR Solver',
             'version': '1.0.0',
             'exported_at': datetime.now().isoformat()
         }

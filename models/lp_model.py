@@ -162,7 +162,7 @@ class LPResult:
 
 def create_sample_lp_model() -> LPModel:
     """
-    Create a sample PP Chemicals production optimization model
+    Create a sample TBLP (The Best Laboratory Pakistan) production optimization model
     
     Returns:
         LPModel instance with sample data
@@ -201,7 +201,7 @@ def create_sample_lp_model() -> LPModel:
     ]
     
     return LPModel(
-        problem_name="PP Chemicals Production Optimization",
+        problem_name="TBLP Production Optimization",
         description="Maximize profit from chemical production subject to resource constraints",
         maximize=True,
         objective_coefficients=objective,

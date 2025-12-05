@@ -216,7 +216,7 @@ class AssignmentSolver:
 
 def create_sample_problem() -> AssignmentSolver:
     """
-    Create a sample PP Chemicals worker-task assignment problem
+    Create a sample TBLP worker-task assignment problem
     
     Returns:
         AssignmentSolver instance with sample data
@@ -300,7 +300,7 @@ def create_cost_minimization_problem() -> AssignmentSolver:
 if __name__ == "__main__":
     # Test with efficiency maximization problem
     print("=" * 70)
-    print("PP CHEMICALS - WORKER-TASK ASSIGNMENT (Efficiency Maximization)")
+    print("THE BEST LABORATORY PAKISTAN - WORKER-TASK ASSIGNMENT (Efficiency Maximization)")
     print("=" * 70)
     
     solver = create_sample_problem()
@@ -321,7 +321,7 @@ if __name__ == "__main__":
     
     # Test with cost minimization problem
     print("\n" + "=" * 70)
-    print("PP CHEMICALS - WORKER-TASK ASSIGNMENT (Cost Minimization)")
+    print("THE BEST LABORATORY PAKISTAN - WORKER-TASK ASSIGNMENT (Cost Minimization)")
     print("=" * 70)
     
     cost_solver = create_cost_minimization_problem()

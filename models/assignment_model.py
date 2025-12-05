@@ -145,7 +145,7 @@ class AssignmentResult:
 
 def create_sample_assignment_model() -> AssignmentModel:
     """
-    Create a sample PP Chemicals worker-task assignment model
+    Create a sample TBLP worker-task assignment model
     
     Returns:
         AssignmentModel instance with sample data
@@ -177,7 +177,7 @@ def create_sample_assignment_model() -> AssignmentModel:
     ]
     
     return AssignmentModel(
-        problem_name="PP Chemicals Worker Assignment",
+        problem_name="TBLP Worker Assignment",
         description="Assign workers to tasks to maximize efficiency",
         maximize=True,
         cost_matrix=efficiency_matrix,

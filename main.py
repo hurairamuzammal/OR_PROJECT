@@ -1,12 +1,12 @@
 """
-PP Chemicals - Operations Research Problem Solver
+The Best Laboratory Pakistan - Operations Research Problem Solver
 
 A desktop application for solving:
 - Linear Programming (Simplex with Sensitivity Analysis)
 - Assignment Problems (Hungarian Algorithm)
 - Transportation Problems (VAM + MODI)
 
-Author: PP Chemicals OR Team
+Developed by: OptimizeX Group
 Version: 1.0.0
 """
 
@@ -22,7 +22,8 @@ from ui.app import App
 def main():
     """Main entry point for the application"""
     print("=" * 50)
-    print("PP CHEMICALS - OR Problem Solver")
+    print("THE BEST LABORATORY PAKISTAN - OR Problem Solver")
+    print("Developed by OptimizeX Group")
     print("=" * 50)
     print("\nStarting application...")
     

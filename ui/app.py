@@ -7,7 +7,7 @@ import customtkinter as ctk
 import tkinter as tk
 from config.settings import (
     APP_NAME, WINDOW_WIDTH, WINDOW_HEIGHT, 
-    MIN_WIDTH, MIN_HEIGHT, COLORS, FONTS
+    MIN_WIDTH, MIN_HEIGHT, COLORS, FONTS, GROUP_NAME
 )
 from ui.dashboard import DashboardView
 from ui.simplex_view import SimplexView
@@ -17,7 +17,8 @@ from ui.transportation_view import TransportationView
 
 class App(ctk.CTk):
     """
-    Main application window for PP Chemicals OR Solver
+    Main application window for The Best Laboratory Pakistan OR Solver
+    Developed by OptimizeX Group
     
     Features:
     - Modern sidebar navigation with icons
@@ -120,17 +121,28 @@ class App(ctk.CTk):
         
         ctk.CTkLabel(
             logo_frame,
-            text="PP",
-            font=ctk.CTkFont(family=FONTS["family"], size=32, weight="bold"),
+            text="TBLP",
+            font=ctk.CTkFont(family=FONTS["family"], size=28, weight="bold"),
             text_color="#FFFFFF"
         ).pack(side="left")
         
+        # Group name badge
+        group_badge = ctk.CTkFrame(logo_frame, fg_color=COLORS["accent"], corner_radius=4)
+        group_badge.pack(side="left", padx=(8, 0), pady=(8, 0))
         ctk.CTkLabel(
-            logo_frame,
-            text="CHEMICALS",
-            font=ctk.CTkFont(family=FONTS["family"], size=14, weight="bold"),
-            text_color=COLORS["accent"]
-        ).pack(side="left", padx=(5, 0), pady=(10, 0))
+            group_badge,
+            text=f" {GROUP_NAME} ",
+            font=ctk.CTkFont(family=FONTS["family"], size=10, weight="bold"),
+            text_color="#FFFFFF"
+        ).pack(padx=4, pady=2)
+        
+        # Company full name
+        ctk.CTkLabel(
+            logo_container,
+            text="The Best Laboratory Pakistan",
+            font=ctk.CTkFont(family=FONTS["family"], size=12, weight="bold"),
+            text_color=COLORS["accent_light"]
+        ).pack(anchor="w", pady=(8, 0))
         
         # Tagline
         ctk.CTkLabel(
@@ -138,7 +150,7 @@ class App(ctk.CTk):
             text="Operations Research Suite",
             font=ctk.CTkFont(family=FONTS["family"], size=11),
             text_color=COLORS["text_muted"]
-        ).pack(anchor="w", pady=(5, 0))
+        ).pack(anchor="w", pady=(3, 0))
         
         # Divider with accent color
         divider_frame = ctk.CTkFrame(self.sidebar, fg_color="transparent")
@@ -286,7 +298,7 @@ class App(ctk.CTk):
         
         ctk.CTkLabel(
             version_frame,
-            text="PP Chemicals OR Suite v1.0.0",
+            text=f"TBLP OR Suite v1.0.0 | {GROUP_NAME}",
             font=ctk.CTkFont(family=FONTS["family"], size=10),
             text_color=COLORS["text_muted"]
         ).pack(pady=12)

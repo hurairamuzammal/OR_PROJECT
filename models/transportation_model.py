@@ -161,7 +161,7 @@ class TransportationResult:
 
 def create_sample_transportation_model() -> TransportationModel:
     """
-    Create a sample PP Chemicals transportation model
+    Create a sample TBLP transportation model
     
     Returns:
         TransportationModel instance with sample data
@@ -197,7 +197,7 @@ def create_sample_transportation_model() -> TransportationModel:
     ]
     
     return TransportationModel(
-        problem_name="PP Chemicals Distribution Network",
+        problem_name="TBLP Distribution Network",
         description="Minimize transportation cost from plants to construction sites",
         supply=supply,
         demand=demand,
